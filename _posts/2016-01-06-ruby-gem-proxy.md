@@ -1,5 +1,5 @@
 ---
-title: Ruby gem 安装代理服务器
+title: Ruby gem 代理服务器
 
 ---
 
