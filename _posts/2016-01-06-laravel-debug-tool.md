@@ -19,7 +19,9 @@ $ composer require barryvdh/laravel-debugbar -vvv
     
 2. 添加service到config/app.php文件的provider数组中  
 
-```php
+
+{% highlight php %}
+
 // config/app.php
 return [
     // ...
@@ -28,8 +30,8 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
     ], 
 ];
-```
 
+{% endhighlight %}  
 
     
 安装以后页面显示内容

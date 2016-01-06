@@ -1,0 +1,18 @@
+
+<div class="next-prev-page">
+
+{% if page.previous %}
+
+<div class="prev-page">上一篇: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
+
+{% endif %}
+
+{% if page.next %}
+
+<div class="next-page">下一篇: <a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
+
+{% endif %}
+
+</div>
+
+<div class="clear"></div>
