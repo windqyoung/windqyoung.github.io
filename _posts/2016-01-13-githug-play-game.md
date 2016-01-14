@@ -13,7 +13,7 @@ githug: 一个好玩的git技能游戏
 
 例如:
 
-1. rebase -
+1. rebase -i
 2. add -p
 3. repack
 4. cherry-pick
