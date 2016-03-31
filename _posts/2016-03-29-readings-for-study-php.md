@@ -46,7 +46,7 @@ title: 学习PHP以来读过的资料
     1. [psr-4](http://www.php-fig.org/psr/psr-4/)
 
 
-1. [php-the-right-way](http://laravel-china.github.io/php-the-right-way/)
+1. [php之道](http://laravel-china.github.io/php-the-right-way/)
 
 1. [Symfony](http://symfony.com/doc/current/book/index.html)
     1. [各组件](http://symfony.com/doc/current/components/index.html)
@@ -114,4 +114,3 @@ title: 学习PHP以来读过的资料
     1. css基础
     1. webservice
     1. soap
-
