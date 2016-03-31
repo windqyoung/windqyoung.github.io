@@ -47,6 +47,7 @@ title: 学习PHP以来读过的资料
 
 
 1. [php之道](http://laravel-china.github.io/php-the-right-way/)
+    1. [英文](http://www.phptherightway.com/)
 
 1. [Symfony](http://symfony.com/doc/current/book/index.html)
     1. [各组件](http://symfony.com/doc/current/components/index.html)
