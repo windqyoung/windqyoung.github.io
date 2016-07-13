@@ -17,7 +17,7 @@ github_username:  windqyoung
 
 # Build settings
 markdown: kramdown
-mani: 求道之心, 永驻心田. 读万卷书, 行万里路. 文字游戏, 谱写人生.
+mani: 求道之心, 永驻心田. 读万卷书, 行万里路. 
 
 defaults:
   -
@@ -27,4 +27,3 @@ defaults:
     values:
       layout: post
       author: windqyoung
-
