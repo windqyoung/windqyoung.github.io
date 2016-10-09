@@ -11,13 +11,13 @@ email: windqyoung@qq.com
 description: > # this means to ignore newlines until "baseurl:"
     日常学习使用心得.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://windqyoung.github.io" # the base hostname & protocol for your site
+url: "//windqyoung.github.io" # the base hostname & protocol for your site
 twitter_username: windqyoung
 github_username:  windqyoung
 
 # Build settings
 markdown: kramdown
-mani: 求道之心, 永驻心田. 读万卷书, 行万里路. 
+mani: 求道之心, 永驻心田. 读万卷书, 行万里路.
 
 defaults:
   -
