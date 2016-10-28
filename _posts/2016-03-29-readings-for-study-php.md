@@ -49,6 +49,9 @@ title: 学习PHP以来读过的资料
 1. [php之道](http://laravel-china.github.io/php-the-right-way/)
     1. [英文](http://www.phptherightway.com/)
 
+
+1. [PHP最佳实践](https://phpbestpractices.org/)
+
 1. [Symfony](http://symfony.com/doc/current/book/index.html)
     1. [各组件](http://symfony.com/doc/current/components/index.html)
 
@@ -73,6 +76,7 @@ title: 学习PHP以来读过的资料
     1. guzzle, http通讯
     1. swiftmail, 邮件
     1. phpmailer, 邮件
+    1. [HTML Purifier](http://htmlpurifier.org/docs), 净化html, 防止xss攻击.
     1. 发布代码到packagist.org
 
 1. [Web 控制台](https://developer.mozilla.org/zh-CN/docs/Tools/Web_Console)
