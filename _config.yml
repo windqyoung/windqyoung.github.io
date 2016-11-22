@@ -17,7 +17,10 @@ github_username:  windqyoung
 
 # Build settings
 markdown: kramdown
-mani: 求道之心, 永驻心田. 读万卷书, 行万里路.
+mani:
+    - 求道之心, 永驻心田.
+    - 读万卷书, 行万里路.
+    - 取其一而修之, 取其余而鉴之.
 
 defaults:
   -
