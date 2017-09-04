@@ -9,6 +9,10 @@ title: 学习PHP以来读过的资料
 
     1. [中文](http://www.phpcomposer.com/)
 
+
+1. [php之道](http://laravel-china.github.io/php-the-right-way/)
+    1. [英文](http://www.phptherightway.com/)
+
 1. http协议
     1. [抽象请求响应](http://symfony.com/doc/current/book/http_fundamentals.html)
 
@@ -44,10 +48,6 @@ title: 学习PHP以来读过的资料
     1. [psr-1](http://www.php-fig.org/psr/psr-1/)
     1. [psr-2](http://www.php-fig.org/psr/psr-2/)
     1. [psr-4](http://www.php-fig.org/psr/psr-4/)
-
-
-1. [php之道](http://laravel-china.github.io/php-the-right-way/)
-    1. [英文](http://www.phptherightway.com/)
 
 
 1. [PHP最佳实践](https://phpbestpractices.org/)
@@ -121,5 +121,6 @@ title: 学习PHP以来读过的资料
     1. css基础
     1. webservice
     1. [soap](http://php.net/manual/zh/book.soap.php)
+
 
 1. [火狐官网](https://developer.mozilla.org/zh-CN/docs/Web)
