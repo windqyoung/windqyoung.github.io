@@ -13,21 +13,21 @@ title: 学习PHP以来读过的资料
     1. [抽象请求响应](http://symfony.com/doc/current/book/http_fundamentals.html)
 
 1. [php手册](http://php.net/manual/zh/)
-    1. 从头(版权信息)到尾(附录)全部阅读  
+    1. 从头(版权信息)到尾(附录)全部阅读
     1. [语言参考](http://php.net/manual/zh/langref.php)
-    1. mysqli
-    1. pdo
-    1. 日期时间
+    1. [mysqli](http://php.net/manual/zh/book.mysqli.php)
+    1. [pdo](http://php.net/manual/zh/book.pdo.php)
+    1. [日期时间](http://php.net/manual/zh/book.datetime.php)
 
 1. php命令行
-    1. 内置服务器
-    1. 执行php脚本
+    1. [内置服务器](http://php.net/manual/zh/features.commandline.webserver.php)
+    1. [执行php脚本](http://php.net/manual/zh/features.commandline.php)
 
 1. php调试
-    1. xdebug安装
+    1. [xdebug安装](http://xdebug.org)
     1. 从ide中启动xdebug调试
 
-1. sql注入及防止
+1. [sql注入及防止](http://php.net/manual/zh/pdo.prepare.php)
 
 1. [git](https://git-scm.com/book/zh/v2)
 
@@ -37,7 +37,7 @@ title: 学习PHP以来读过的资料
 
 1. [php-fig](http://www.php-fig.org/)
 
-    > 由流行框架及组件的作者组成的组织, 为了方便各组件的互操作  
+    > 由流行框架及组件的作者组成的组织, 为了方便各组件的互操作
     > 自动加载以及代码风格指导
 
     1. [psr-0](http://www.php-fig.org/psr/psr-0/)
@@ -69,33 +69,35 @@ title: 学习PHP以来读过的资料
 1. [常用扩展包](https://packagist.org/)
     1. [phpunit](https://phpunit.de/), 单元测试
     1. [doctrine(dbal, orm)](http://www.doctrine-project.org/projects.html), 数据库操作
-    1. monolog, 日志
-    1. symfony/console, 控制台命令行
-    1. yaml, 数据结构
+    1. [monolog, 日志](https://packagist.org/packages/monolog/monolog)
+    1. [symfony/console, 控制台命令行](https://packagist.org/packages/symfony/console)
+    1. [yaml, 数据结构](https://packagist.org/packages/symfony/yaml)
     1. Psysh, 命令行交互式环境
-    1. guzzle, http通讯
-    1. swiftmail, 邮件
-    1. phpmailer, 邮件
+    1. [guzzle, http通讯](https://packagist.org/packages/guzzlehttp/guzzle)
+    1. [swiftmail, 邮件](https://packagist.org/packages/swiftmailer/swiftmailer)
+    1. [phpmailer, 邮件](https://packagist.org/packages/phpmailer/phpmailer)
     1. [HTML Purifier](http://htmlpurifier.org/docs), 净化html, 防止xss攻击.
     1. 发布代码到packagist.org
 
 1. [Web 控制台](https://developer.mozilla.org/zh-CN/docs/Tools/Web_Console)
 
-1. jQuery文档
+1. [jQuery文档](http://api.jquery.com/)
 
-1. jQueryUi文档
+1. [jQueryUi文档](http://api.jqueryui.com/)
 
 1. [bootstrap](http://www.bootcss.com/)
 
-1. MySql文档
+1. [MySql文档](https://dev.mysql.com/doc/refman/5.7/en/)
     1. sql语法
     1. 内置函数
+    1. [mysql.json类型](https://dev.mysql.com/doc/refman/5.7/en/json.html)
+        [mysql.json函数](https://dev.mysql.com/doc/refman/5.7/en/json-functions.html)
 
-1. Apache文档
+1. [Apache文档](http://httpd.apache.org/docs/2.4/)
     1. 常用配置
     1. 处理错误配置(httpd -t)
 
-1. nginx文档
+1. [nginx文档](http://nginx.org/en/docs/)
 
 1. linux常用操作命令
 
@@ -118,4 +120,6 @@ title: 学习PHP以来读过的资料
 1. [w3school](http://www.w3school.com.cn/)
     1. css基础
     1. webservice
-    1. soap
+    1. [soap](http://php.net/manual/zh/book.soap.php)
+
+1. [火狐官网](https://developer.mozilla.org/zh-CN/docs/Web)
