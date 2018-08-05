@@ -20,6 +20,7 @@ TINYTEXT, TEXT, MEDIUMTEXT, LONGTEXT 分别额外增加 9, 10, 11, 12 byte
 
 # 数字类型
 ---
+
 | 类型 | 长度 |
 | --- | --- |
 | TINYINT | 1 byte | 
