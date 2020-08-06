@@ -19,14 +19,8 @@ title: css 动画 星球圆周运动
 
 
 .container {
-    position: fixed;
     width: 400px;
     height: 400px;
-
-    top: 50%;
-    left: 50%;
-    margin-top: -200px;
-    margin-left: -200px;
 
     animation: anim2 5s infinite alternate;
 }
