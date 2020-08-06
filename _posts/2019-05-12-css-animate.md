@@ -37,7 +37,7 @@ title: css 动画 星球圆周运动
     width: 50%;
     height: 50%;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 50%;
     animation: anim1 10s infinite ;
 }
@@ -45,7 +45,7 @@ title: css 动画 星球圆周运动
     width: 50%;
     height: 50%;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 50%;
     animation: anim1 5s infinite ;
 }
@@ -81,6 +81,18 @@ title: css 动画 星球圆周运动
     border: 1px solid gray;
 }
 
+@keyframes body-invert {
+    from {
+        filter: invert(0);
+    }
+    from {
+        filter: invert(1);
+    }
+}
+
+body {
+    animation: 20s infinite body-invert alternate;
+}
 
 </style>
 
