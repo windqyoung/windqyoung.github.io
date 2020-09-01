@@ -1,7 +1,8 @@
 
 
 .next-prev-page {
-	
+	display: flex;
+	justify-content: space-between;
 }
 
 .next-page {
@@ -14,4 +15,12 @@
 
 .clear {
 	clear: both;
+}
+
+.post-item {
+	transition: transform 1s;
+	transform-origin: left top;
+}
+.post-item:hover {
+	transform: rotate(5deg) translate(20px);
 }
