@@ -12,6 +12,7 @@
             .block {
                 border-bottom: 1px solid black;
             }
+
         </style>
     </head>
     <body>
@@ -20,12 +21,20 @@
 <script>
 let encode = document.createElement('div');
 let msgEle = document.querySelector('#msg');
+let html = document.documentElement;
 
 window.addEventListener('message', function (e) {
+    // 高度误差在5px之内, 滚动到底.
+    let isScrollBottom = html.scrollHeight - html.scrollTop - html.clientHeight < 3;
+
     let data = e.data;
     let jsonStr = JSON.stringify(data);
     encode.textContent = jsonStr;
-    msgEle.insertAdjacentHTML('afterbegin', '<div class="block"><div class="head">' + Date() + ':</div>' + encode.innerHTML + '</div>');
+    msgEle.insertAdjacentHTML('beforeend', '<div class="block"><div class="head">' + Date() + ':</div>' + encode.innerHTML + '</div>');
+
+    if (isScrollBottom) {
+        html.scrollTop = html.scrollHeight;
+    }
 });
 
 

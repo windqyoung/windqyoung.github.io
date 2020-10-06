@@ -12,14 +12,16 @@ title: 测试postMessage
     let started = false;
     let frameBtn = document.querySelector('#open-frame');
     frameBtn.addEventListener('click', function (e) {
+        let frame = document.querySelector('#iframe1');
+        let target = frame.contentWindow;
+
         if (started) {
             console.log('repeat start click');
+            target.postMessage('repeat click button', '*');
             return;
         }
         started = true;
 
-        let frame = document.querySelector('#iframe1');
-        let target = frame.contentWindow;
 
         target.postMessage('start post message at ' + Date(), '*');
 
