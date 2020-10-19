@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BroadcastChannel 接收</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="message"></div>
+
+<script>
+let msgEle = document.querySelector('#message');
+
+let channelName = 'test-channel';
+
+let chan = new BroadcastChannel(channelName);
+
+chan.addEventListener('message', e => {
+    let data = e.data;
+    let dStr = JSON.stringify(data);
+    let dHtml = '<div style="border-bottom: solid;"><span style="color: red">' + Date() + '</span><div>' + dStr + '</div></div>';
+    msgEle.insertAdjacentHTML('afterbegin', dHtml);
+});
+</script>
+    </body>
+</html>

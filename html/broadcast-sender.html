@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BroadcastChannel 发送</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><textarea id="text" style="width: 100%;">Hello, World</textarea>
+        </div>
+        <div><button id="send">发送</button></div>
+
+<script>
+let textEle = document.querySelector('#text');
+let sendEle = document.querySelector('#send');
+let channelName = 'test-channel';
+
+let chan = new BroadcastChannel(channelName);
+sendEle.addEventListener('click', e => {
+    let text = textEle.value;
+    let data = {text: text, date: Date()};
+    chan.postMessage(data);
+});
+</script>
+    </body>
+</html>
