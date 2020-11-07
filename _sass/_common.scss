@@ -18,9 +18,10 @@
 }
 
 .post-item {
-	transition: transform 1s;
+	transition: transform 1s, background-color 1s;
 	transform-origin: left top;
 }
 .post-item:hover {
 	transform: rotate(5deg) translate(20px);
+	background-color: #dc41c9;
 }
