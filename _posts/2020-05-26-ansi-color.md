@@ -43,3 +43,40 @@ for ($r = 0; $r < 256; $r+=$step) {
 }
 
 ```
+
+
+```python
+
+print("默认7位")
+for i in range(256):
+    print(f"\x1b[{i}mcolor {i}\x1b[m ", end='')
+
+print()
+print("256色字体")
+for i in range(256):
+    print(f"\x1b[38;5;{i}mcolor {i}\x1b[m ", end='')
+
+print()
+print("256色背景")
+for i in range(256):
+    print(f"\x1b[48;5;{i}mcolor {i}\x1b[m ", end='')
+
+print()
+print("24位字体")
+step = 15;
+for r in range(0, 256, step):
+    for g in range(0, 256, step):
+        for b in range(0, 256, step):
+            print(f"\x1b[38;2;{r};{g};{b}m{r}.{g}.{b}\x1b[m ", end='')
+
+
+print()
+print("24位背景")
+step = 15;
+for r in range(0, 256, step):
+    for g in range(0, 256, step):
+        for b in range(0, 256, step):
+            print(f"\x1b[48;2;{r};{g};{b}m{r}.{g}.{b}\x1b[m ", end='')
+
+
+```
