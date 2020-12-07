@@ -8,16 +8,17 @@ title: canvas demo
 <div><canvas width="500" height="500" id="c" style="border: solid;"></canvas></div>
 
 <script>
-cEle = document.querySelector('#c');
-eW = cEle.width
-eH = cEle.height
-ctx = cEle.getContext('2d');
-radius = 5;
-endArc = Math.PI * 2
-startArc = 0;
+var cEle = document.querySelector('#c');
+var eW = cEle.width
+var eH = cEle.height
+var ctx = cEle.getContext('2d');
+var radius = 5;
+var endArc = Math.PI * 2
+var startArc = 0;
+var opacityStyle = 'rgba(0, 0, 0, 0.05)';
 
 function drawPix() {
-    ctx.fillStyle = s = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillStyle = s = opacityStyle;
     ctx.fillRect(0, 0, eW, eH)
     ctx.fillStyle = s = 'rgba(' + 
             Math.random() * 255 + ',' + 
@@ -34,7 +35,9 @@ function drawPix() {
 }
 requestAnimationFrame(drawPix)
 
-document.querySelector('#r').addEventListener('blur', function (e) {
+var rinp = document.querySelector('#r');
+rinp.value = radius;
+rinp.addEventListener('blur', function (e) {
     var v = +this.value
     console.log(v);
     if (v > 0) {
