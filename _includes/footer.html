@@ -30,7 +30,9 @@
             </div>
 
             <div class="footer-col footer-col-3">
+                {% if site.email %}
                 <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                {% endif %}
             </div>
         </div>
 
