@@ -41,3 +41,10 @@ title: 创建mysql innodb cluster
 10. 集群所有结点都挂了之后重启
 
     dba.rebootClusterFromCompleteOutage()
+
+11. 集群中存活节点数量不足时, 将无法选出主服务器.
+    此时, 需要手工处理.
+
+    cluster.forceQuorumUsingPartitionOf('指定为主机的节点')
+
+    如果集群中有节点状态不正常, 使用 cluster.rejoinInstance() 重新添加到集群.
