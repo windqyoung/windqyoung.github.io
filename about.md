@@ -10,10 +10,4 @@ permalink: /about/
 > <p>博学审问，慎思明辨，笃行之。</p>
 
 
-PHP Python Node Java
-
-
-
-
-
-
+PHP Python Node Java MySQL PostgreSQL
