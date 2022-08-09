@@ -31,10 +31,10 @@ title: 使用docker搭建rabbitmq集群记录
 
     创建用户及赋权
 
-    `rabbitmqctl add_user admin admin ; rabbitmqctl set_user_tags admin administrator`
+    `rabbitmqctl add_user admin admin ; rabbitmqctl set_user_tags admin administrator ; rabbitmqctl set_permissions admin '.*' '.*' '.*'`
 
     启动http插件
-    
+
     `rabbitmq-plugins enable rabbitmq_management`
 
 7. 在2,3上执行命令, 加信节点1的集群
