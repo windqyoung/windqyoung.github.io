@@ -39,4 +39,9 @@ title: 使用docker搭建rabbitmq集群记录
 
 7. 在2,3上执行命令, 加信节点1的集群
 
-    `rabbitmqctl stop_app ; rabbitmqctl join_cluster rabbit@rab1 ; rabbitmqctl start_app`    
+    `rabbitmqctl stop_app ; rabbitmqctl reset;  rabbitmqctl join_cluster rabbit@rab1 ; rabbitmqctl start_app`    
+
+8. 查看集群状态
+
+    `rabbitmqctl cluster_status`
+
