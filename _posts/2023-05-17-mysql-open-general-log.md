@@ -19,3 +19,14 @@ trap stopmysqlgeneral exit
 filename=$(mysql -e 'select @@general_log_file' --skip-column-names )
 tail -f $filename
 ```
+
+```powershell
+
+$file = mysql -e "select @@general_log_file" --skip-column-names
+$dir = mysql -e "select @@datadir" --skip-column-names
+$full = join-path $dir $file
+
+echo "listening for $full"
+gc $full -Tail 20 -Wait
+
+```
