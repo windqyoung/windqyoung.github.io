@@ -1,0 +1,26 @@
+---
+title: VBox虚拟机磁盘文件空间清理
+---
+
+# 步骤如下
+
+1. 使用ro选项挂载磁盘分区
+
+    `mount /var/lib -o remount,ro`
+    
+    > 如果分区显示忙, 使用 `lsof /var/lib` 查看哪些进程在使用分区, 然后关闭相应的服务/进程.
+
+    > 如果正常启动无法关闭程序, 可以使用单用户模式启动系统, 重新挂载.
+
+    > 单用户模式Ubuntu启动方式: 开机按住shift进启动菜单, 在高级菜单下recovery模式按e, 找到linux行, 修改为 `single init=/bin/bash`, 然后重启
+      
+    
+2. 使用zerofree命令把虚拟机的磁盘空间用0填充.
+
+    `zerofree -v /dev/mapper/lv-varlib`
+
+    > 如果有多个lv分区, 循环处理即可
+
+3. 执行虚拟磁盘空间清理命令.
+
+    `VBoxManage modifymedium disk ubuntu-base-node-disk001.vdi --compact`
