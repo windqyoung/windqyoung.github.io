@@ -9,7 +9,7 @@ title: 监听windows下进程启动与关闭
 function out_proc_info($tip, $p, $showPath) {
     write-host -NoNewline $tip ""
     write-host -NoNewline -ForegroundColor DarkBlue $p.ID
-    write-host -NoNewline " " $p.Name $p.Path
+    write-host -NoNewline " " $p.Name $p.Path $p.CommandLine
 
     while ($p.Parent) {
         $p = $p.Parent
