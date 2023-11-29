@@ -58,8 +58,9 @@ Foo1 -> Foo3: TO 3
 ```powershell
 # run-puml.ps1
 
-param(
-    [Parameter(Mandatory=$true)]$dir
+param( 
+    [Parameter(Mandatory, HelpMessage="plantuml文件所在的目录")]
+    $dir 
 )
 
 
