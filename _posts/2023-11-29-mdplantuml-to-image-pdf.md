@@ -58,7 +58,9 @@ Foo1 -> Foo3: TO 3
 ```powershell
 # run-puml.ps1
 
-param( $dir )
+param(
+    [Parameter(Mandatory=$true)]$dir
+)
 
 
 if (! $dir) {
