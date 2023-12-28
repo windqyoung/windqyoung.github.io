@@ -16,6 +16,9 @@ title: PlantUML内容转图片和PDF
 
 [plantuml序列图语法,箭头样式参考]( https://plantuml.com/zh/sequence-diagram)
 
+[plantuml主题参考](https://www.planttext.com/) [主题参考2](https://the-lum.github.io/puml-themes-gallery/) [主题参考3](https://bschwarz.github.io/puml-themes/gallery.html)
+
+
 运行命令  
 java -jar plantuml-1.2023.12.jar -Sdpi=200 -gui 目录或文件
 
