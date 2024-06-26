@@ -54,3 +54,59 @@ while ($true) {
     sleep 1
 }
 ```
+
+
+# 使用 Get-CimInstance, 可以获取到 CommandLine
+
+```powershell
+
+
+function out_proc_info($tip, $p, $processSet) {
+    write-host -ForegroundColor Green $tip $p.ProcessId
+    write-host "`t" $p.ProcessId $p.ProcessName $p.Path $p.Description 'PID' $p.ParentProcessId
+    write-host "`t" -ForegroundColor Green $p.CommandLine
+}
+
+
+function Get-Process-Cim-List()
+{
+    Get-CimInstance -ClassName Win32_Process
+}
+
+# 初始化
+$last_set = @{}
+$ps = Get-Process-Cim-List
+foreach ($p in $ps) {
+    $last_set[$p.ProcessId] = $p
+}
+
+# 进程ID短期内不会重用
+
+while ($true) {
+    write-host -NoNewline .
+    $ps = Get-Process-Cim-List
+    $this_set = @{}
+    foreach ($p in $ps) {
+        $id = $p.ProcessId
+        # 添加到当前中
+        $this_set[$id] = $p
+        if ($last_set[$id]) {
+            # 已存在, 忽略
+        } else {
+            out_proc_info "CREATE"  $p
+        }
+    }
+
+    foreach ($last_pid in $last_set.Keys) {
+        if ($this_set[$last_pid]) {
+            # 没变化
+        } else {
+            # 已关闭
+            $p = $last_set[$last_pid]
+            out_proc_info "    CLOSED" $p
+        }
+    }
+    $last_set = $this_set
+    sleep 1
+}
+```
