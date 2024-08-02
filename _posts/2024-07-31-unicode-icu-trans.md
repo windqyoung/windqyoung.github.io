@@ -35,3 +35,36 @@ var_dump(transliterator_transliterate('Any-Latin; Latin-ASCII; upper; title', $s
 
 ?>
 ```
+
+
+## Java用例
+```java
+/**
+ * 依赖
+        <dependency>
+            <groupId>com.ibm.icu</groupId>
+            <artifactId>icu4j</artifactId>
+            <version>74.2</version>
+        </dependency>
+ * 
+ */
+
+package org.example;
+
+import com.ibm.icu.text.Transliterator;
+
+public class Main {
+    public static void main(String[] args) {
+        var ids = Transliterator.getAvailableIDs();
+        ids.asIterator().forEachRemaining((id) -> {
+            System.out.println("id = " + id);
+        });
+
+        var trans = Transliterator.getInstance("Any-Latin");
+        var str = "你好me";
+        var transrs = trans.transliterate(str);
+        System.out.println("transrs = " + transrs);
+    }
+}
+
+```
