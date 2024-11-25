@@ -1,5 +1,5 @@
 ---
-title: Ruet 练习, tcp回显服务器
+title: Rust 练习, tcp回显服务器
 ---
 
 ```rust 
