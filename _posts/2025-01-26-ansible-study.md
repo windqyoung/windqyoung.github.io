@@ -21,3 +21,6 @@ title: Ansible 简单总结
 
 8. `--vault-id dev@password-client` 可以转换成 `password-client --vault-id=dev` 来获取相应的密码
 
+9. [在模板中可以使用的变量](https://docs.ansible.org.cn/ansible/latest/reference_appendices/special_variables.html)
+
+10. [ansible版本支持](https://docs.ansible.org.cn/ansible/latest/reference_appendices/release_and_maintenance.html#ansible-core-support-matrix)
