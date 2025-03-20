@@ -6,7 +6,7 @@ title: VBox虚拟机磁盘文件空间清理
 
 1. 使用单用户模式启动ubuntu
 
-    > 开机按住shift进启动菜单, 在高级菜单下recovery模式按e, 找到linux行, 修改为 `single init=/bin/bash`, 然后重启
+    > 开机按住shift进启动菜单, 在高级菜单下recovery模式按e, 找到linux行, 删除 `ro` 后面的内容, 追加 `single init=/bin/bash`, 然后重启
 
 2. 使用ro选项挂载磁盘分区
 
