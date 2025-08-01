@@ -5,6 +5,9 @@ title: kafka认证配置
 # 服务器
 ```conf
 
+listeners=SASL_SSL://host.name:port
+security.inter.broker.protocol=SASL_SSL
+sasl.mechanism.inter.broker.protocol=PLAIN
 # 关键点
 sasl.enabled.mechanisms=PLAIN,SCRAM-SHA-256
 
@@ -19,6 +22,8 @@ sasl.enabled.mechanisms=PLAIN,SCRAM-SHA-256
 ```
 # 服务器jaas.conf
 ```conf
+
+# username 是和其它 broker 通信的。
 client1.KafkaServer {
     org.apache.kafka.common.security.plain.PlainLoginModule required
     username="admin"
