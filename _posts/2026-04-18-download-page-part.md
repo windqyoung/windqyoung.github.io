@@ -21,9 +21,9 @@ title: 保存页面的部分为html
 <head>
   <meta charset="utf-8"></meta>
   <title>${title}</title>
-  <style>
-      ${style}
-  </style>
+
+${style}
+
 </head>
 <body>
 <div id="app" data-desc="TODO">
@@ -58,23 +58,33 @@ function build_web_page(body, title) {
 
 function get_style_content()
 {
-  const style_list = [];
+  const style_element_list = [];
 
   const styleSheets = document.styleSheets;
   for (let i_ss = 0; i_ss < styleSheets.length; i_ss++ ) {
     const style = styleSheets[i_ss];
     try {
-        const cssRules = style.cssRules;
+        // 直接访问
+        const style_list = []
+        const cssRules = style.cssRules; // 可能异常
         for (let i_css_rule = 0; i_css_rule < cssRules.length; i_css_rule++) {
             const rule = cssRules[i_css_rule];
             style_list.push(rule.cssText);
         }
+        style_element_list.push(style_list.join("\n\n"));
     } catch (error) {
       console.log(error)
+      try {
+        // 外部文件
+        const link = '<link rel="stylesheet" href="' + encodeURI(style.href) + '">';
+        style_element_list.push(link);
+      } catch (error2) {
+        console.log(error2)
+      }
     }
   }
 
-  return style_list.join("\n\n");
+  return style_element_list.join("\n\n\n");
 }
 
 
