@@ -37,6 +37,8 @@ title: 保存页面的部分为html
 
 <script>
 
+const download_template = document.getElementById('download_template').textContent;
+
 const save_html = () => {
   const inner = document.querySelector('#app').innerHTML;
 
