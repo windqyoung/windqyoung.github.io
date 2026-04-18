@@ -61,9 +61,14 @@ function get_style_content()
   const styleSheets = document.styleSheets;
   for (let i_ss = 0; i_ss < styleSheets.length; i_ss++ ) {
     const style = styleSheets[i_ss];
-    for (let i_css_rule = 0; i_css_rule < style.cssRules.length; i_css_rule++) {
-      const rule = style.cssRules[i_css_rule];
-      style_list.push(rule.cssText);
+    try {
+        const cssRules = style.cssRules;
+        for (let i_css_rule = 0; i_css_rule < cssRules.length; i_css_rule++) {
+            const rule = cssRules[i_css_rule];
+            style_list.push(rule.cssText);
+        }
+    } catch (error) {
+      console.log(error)
     }
   }
 
