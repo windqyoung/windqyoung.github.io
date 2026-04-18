@@ -17,7 +17,7 @@ title: 在Echarts地图坐标系中设置底图
     const dom_ref = { value: document.querySelector('.main-echarts') };
 
 
-    const image_url = 'https://www.bijingdi.com/uploadfile/2025/0609/20250609235204914.jpg';
+    const image_url = '/images/echarts-bg.jpg';
     const geo_json_url = 'https://geojson.cn/api/china/1.6.3/china.json';
 
 
