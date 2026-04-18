@@ -48,7 +48,7 @@ const save_html = () => {
 
 
 
-function build_web_page(body: string, title?: string) {
+function build_web_page(body, title) {
   const style = get_style_content();
   return download_template.replace("${style}", style).replace("${body}", body).replace("${title}", title || '')
 }
@@ -71,7 +71,7 @@ function get_style_content()
 }
 
 
-function download_web_page(content: string, filename: string) {
+function download_web_page(content, filename) {
   const blob = new Blob([content], { type: 'text/html;charset=utf-8' });
 
   const a = document.createElement('a');
