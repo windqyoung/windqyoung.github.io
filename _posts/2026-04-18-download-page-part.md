@@ -71,7 +71,7 @@ function get_style_content()
             const rule = cssRules[i_css_rule];
             style_list.push(rule.cssText);
         }
-        style_element_list.push(style_list.join("\n\n"));
+        style_element_list.push('<style>' + style_list.join("\n\n") + '</style>');
     } catch (error) {
       console.log(error)
       try {
